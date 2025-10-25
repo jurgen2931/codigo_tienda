@@ -1,0 +1,174 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #222;
+  min-height: 100vh;
+}
+
+
+header {
+  background: #070000;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+header .logo h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto; 
+  margin-right: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #070000;
+  transform: scale(1.05);
+}
+
+header .asesor {
+  width: 55px;
+  height: auto;
+}
+
+
+main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 5%;
+  gap: 40px;
+}
+
+.texto-contacto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.texto-contacto h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #070000;
+}
+
+.texto-contacto p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.texto-contacto strong {
+  display: block;
+  margin-top: 20px;
+  color: #070000;
+}
+
+
+form {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #d9cfc9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #222;
+  font-weight: 600;
+}
+
+form textarea {
+  resize: none;
+  height: 120px;
+}
+
+button {
+  align-self: flex-end;
+  background: transparent;
+  color: #070000;
+  border: 2px solid #070000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #070000;
+  color: white;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin: 10px 0 0 0;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .texto-contacto {
+    width: 90%;
+  }
+
+  button {
+    align-self: center;
+  }
+}

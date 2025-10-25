@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Productos</title>
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+  
+  <header>
+    <div class="logo-titulo">
+      <img src="img/carrito.png" alt="Logo Carrito Izquierdo">
+      <h1>PRODUCTS HUB</h1>
+    </div>
+    <img src="img/carrito.png" alt="Logo Carrito Derecho" class="carrito-derecha">
+  </header>
+
+  
+  <div class="carrito">
+    <h3>CARRITO DE COMPRAS</h3>
+    <h4>ENVÍO ESPECIAL PARA TI</h4>
+
+    
+    <div class="producto" data-precio="160000">
+      <img src="img/Altavosjbl.jpg" alt="Altavoz JBL">
+      <div class="info">
+        <h4>ALTAVOCES JBL</h4>
+        <p>COP 160.000</p>
+        <p><del>COP 190.000</del></p>
+      </div>
+      <div class="contador">
+        <button class="menos">-</button>
+        <span class="cantidad">1</span>
+        <button class="mas">+</button>
+      </div>
+    </div>
+
+    
+    <div class="producto" data-precio="18000">
+      <img src="img/Camion.jpg" alt="Camión de colores">
+      <div class="info">
+        <h4>CAMIÓN DE JUEGOS DE COLORES</h4>
+        <p>COP 18.000</p>
+        <p><del>COP 20.000</del></p>
+      </div>
+      <div class="contador">
+        <button class="menos">-</button>
+        <span class="cantidad">1</span>
+        <button class="mas">+</button>
+      </div>
+    </div>
+
+    
+    <div class="resumen">
+      <p>SUBTOTAL: COP <span id="subtotal">178.000</span></p>
+      <p>DESCUENTO: COP 32.000</p>
+      <p>ENVÍO ESTIMADO: COP 5.000</p>
+      <hr>
+      <p><strong>TOTAL: COP <span id="total">183.000</span></strong></p>
+      <button class="btn-pagar">PAGAR</button>
+    </div>
+
+    <div class="tarjetas">
+      <img src="img/visa_logo.jpg" alt="Visa">
+      <img src="img/logo_mastercard.png" alt="Mastercard">
+      <img src="img/American_Express_logo.png" alt="Amex">
+      <img src="img/diners_club_logo.png" alt="Diners">
+    </div>
+  </div>
+
+  
+  <script>
+    const productos = document.querySelectorAll('.producto');
+    const subtotalElem = document.getElementById('subtotal');
+    const totalElem = document.getElementById('total');
+
+    function actualizarTotales() {
+      let subtotal = 0;
+      productos.forEach(prod => {
+        const precio = parseInt(prod.dataset.precio);
+        const cantidad = parseInt(prod.querySelector('.cantidad').textContent);
+        subtotal += precio * cantidad;
+      });
+      subtotalElem.textContent = subtotal.toLocaleString('es-CO');
+      totalElem.textContent = (subtotal + 5000).toLocaleString('es-CO'); // envío fijo
+    }
+
+    productos.forEach(prod => {
+      const menos = prod.querySelector('.menos');
+      const mas = prod.querySelector('.mas');
+      const cantidadElem = prod.querySelector('.cantidad');
+
+      mas.addEventListener('click', () => {
+        let cantidad = parseInt(cantidadElem.textContent);
+        cantidadElem.textContent = cantidad + 1;
+        actualizarTotales();
+      });
+
+      menos.addEventListener('click', () => {
+        let cantidad = parseInt(cantidadElem.textContent);
+        if (cantidad > 1) {
+          cantidadElem.textContent = cantidad - 1;
+          actualizarTotales();
+        } else {
+          alert('La cantidad mínima es 1');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

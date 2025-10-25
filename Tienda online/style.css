@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f6f6f6;
+  color: #333;
+}
+
+header {
+  background: #070000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #070000;
+  transform: scale(1.05);
+}
+
+.banner {
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)), 
+              url('img/Fondo.jpg') center/cover no-repeat;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  margin: 30px 2rem;
+  text-align: center;
+}
+
+.banner .icono {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.banner .texto h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.banner .texto p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+#productos {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#productos h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #070000;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+.producto {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.producto p {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.producto button {
+  background: transparent;
+  color: #070000;
+  border: 2px solid #070000;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.producto button:hover {
+  background: #070000;
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .banner {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+
+  .banner .icono {
+    width: 80px;
+    height: 80px;
+  }
+
+  #productos h2 {
+    font-size: 1.6rem;
+  }
+}
