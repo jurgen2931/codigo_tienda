@@ -40,5 +40,33 @@
       <button type="submit">ENVIAR</button>
     </form>
   </main>
+   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    
+    (function() {
+      emailjs.init("DB2XPtZdbq33zcMkf");
+    })();
+
+    
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_pipiaec", "template_fpn61rt", this)
+      .then(() => {
+
+        alert("Mensaje enviado correctamente!");
+
+        
+        window.location.href = "index.html";
+
+      })
+      .catch((error) => {
+        alert("Hubo un error: " + JSON.stringify(error));
+      });
+    });
+  </script>
+
 </body>
 </html>
+
