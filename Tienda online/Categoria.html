@@ -9,117 +9,139 @@
 </head>
 <body>
 
-  <header>
-    <h1>PRODUCTS HUB</h1>
-    <nav>
-      <ul>
-        <a href="index.html">Principal</a>
-        <a href="Contacto.html">Contacto</a>
-        <a href="Carrito.html">Carrito</a>
-      </ul>
-    </nav>
-  </header>
-
-  
-  <nav class="menu-categorias">
-    <a href="#">ROPA</a>
-    <a href="#">ACCESORIOS</a>
-    <a href="#">ZAPATOS</a>
-    <a href="#">JUGUETES</a>
-    <a href="#">TECNOLOGÍA</a>
+<header>
+  <h1>PRODUCTS HUB</h1>
+  <nav>
+    <ul>
+      <a href="index.html">Principal</a>
+      <a href="Contacto.html">Contacto</a>
+      <a href="Carrito.html">Carrito</a>
+    </ul>
   </nav>
+</header>
 
-  
-  <main id="producto">
-    <div class="producto">
-      <img src="img/Camisa.jpg" alt="Camisa">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+<!-- FILTRO CORRECTO -->
+<nav class="menu-categorias">
+  <a class="filter-btn" data-filter="all">TODOS</a>
+  <a class="filter-btn" data-filter="ropa">ROPA</a>
+  <a class="filter-btn" data-filter="accesorios">ACCESORIOS</a>
+  <a class="filter-btn" data-filter="zapatos">ZAPATOS</a>
+  <a class="filter-btn" data-filter="juguetes">JUGUETES</a>
+  <a class="filter-btn" data-filter="tecnologia">TECNOLOGÍA</a>
+</nav>
 
-    <div class="producto">
-      <img src="img/Cadena.jpg" alt="Cadena">
-      <p>COP 150.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+<main id="producto">
 
-    <div class="producto">
-      <img src="img/Zapato nike.jpg" alt="Zapato Nike">
-      <p>COP 160.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <!-- TODAS LAS CATEGORÍAS YA HOMOGENEIZADAS EN MINÚSCULA -->
+  <div class="producto" data-category="ropa">
+    <img src="img/Camisa.jpg" alt="Camisa">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/Dinosaurio.jpg" alt="Dinosaurio">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="accesorios">
+    <img src="img/Cadena.jpg" alt="Cadena">
+    <p>COP 150.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/celular.jpg" alt="Celular">
-      <p>COP 140.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="zapatos">
+    <img src="img/Zapato nike.jpg" alt="Zapato Nike">
+    <p>COP 160.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/Jeans.jpg" alt="Jeans">
-      <p>COP 80.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="juguetes">
+    <img src="img/Dinosaurio.jpg" alt="Dinosaurio">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/aretes.jpg" alt="Aretes">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="tecnologia">
+    <img src="img/celular.jpg" alt="Celular">
+    <p>COP 140.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/Zapato fila.jpg" alt="Zapato Fila">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="ropa">
+    <img src="img/Jeans.jpg" alt="Jeans">
+    <p>COP 80.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/Camion.jpg" alt="Camion">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="accesorios">
+    <img src="img/aretes.jpg" alt="Aretes">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/diademas.jpg" alt="Diademas">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="zapatos">
+    <img src="img/Zapato fila.jpg" alt="Zapato Fila">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/Camisa1.jpg" alt="Camisa 1">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="juguetes">
+    <img src="img/Camion.jpg" alt="Camion">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/reloj.jpg" alt="Reloj">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="tecnologia">
+    <img src="img/diademas.jpg" alt="Diademas">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/Zapatos adidad.jpg" alt="Zapato Adidas">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="ropa">
+    <img src="img/Camisa1.jpg" alt="Camisa 1">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/Cohete.jpg" alt="Cohete">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
+  <div class="producto" data-category="accesorios">
+    <img src="img/reloj.jpg" alt="Reloj">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
 
-    <div class="producto">
-      <img src="img/Laptop.jpg" alt="Laptop">
-      <p>COP 60.000</p>
-      <a href="#">VER DETALLES</a>
-    </div>
-  </main>
+  <div class="producto" data-category="zapatos">
+    <img src="img/Zapatos adidad.jpg" alt="Zapato Adidas">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
+
+  <div class="producto" data-category="juguetes">
+    <img src="img/Cohete.jpg" alt="Cohete">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
+
+  <div class="producto" data-category="tecnologia">
+    <img src="img/Laptop.jpg" alt="Laptop">
+    <p>COP 60.000</p>
+    <a href="#">VER DETALLES</a>
+  </div>
+
+</main>
+
+<script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const products = document.querySelectorAll(".producto");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
+
+      products.forEach(product => {
+        const categoria = product.dataset.category;
+        product.style.display = (filter === "all" || categoria === filter) ? "block" : "none";
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
+
+
